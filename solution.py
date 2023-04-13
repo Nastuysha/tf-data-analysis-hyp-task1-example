@@ -13,4 +13,7 @@ def solution(x_success: int,
     # Не меняйте название функции и её аргументы
     stat, pval = proportions_ztest([x_success, y_success], [x_cnt, y_cnt], alternative='larger')
     alpha = 0.07
-    return pval < alpha # Ваш ответ, True или False
+    if (pval<alpha): 
+        return True 
+    else: 
+        return False
